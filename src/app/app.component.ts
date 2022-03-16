@@ -20,42 +20,85 @@ interface producto {
 };
 //////////////////////////////////////
 /**
- * ALMACENES
+ * AGREGAR ALMACENES
  */
 
  const A001 :  Almacen = {
   codigoA : "A001",
-  nombreA : "Almacen Alcchofas",
+  nombreA : "Almacen Juanito",
   stock   : []
 }
 const A002 :  Almacen = {
   codigoA : "A002",
-  nombreA : "Almacen Shadow MOth",
+  nombreA : "Almacen Dory",
   stock   : []
 }
 
 /**
- * PRODUCTOS
+ * AGREGAR PRODUCTOS
  */
 
 const P001 :  producto = {
   codigoP : "P001",
-  nombreP : "gelatina roja",
+  nombreP : "AJINOMEN",
   cantidad : 50
 }
 
 const P002 : producto = {
   codigoP : "P002",
-  nombreP : "gelatina verde",
+  nombreP : "LECHE GLORIA",
   cantidad : 60
 }
 
 const P003 : producto = {
   codigoP : "P003",
-  nombreP : "gelatina amarilla",
+  nombreP : "3 OSITOS",
   cantidad : 80
+  
 };
-//agregar
-A001.stock.push(P001);
-A001.stock.push(P002);
+const P004 : producto = {
+  codigoP : "P004",
+  nombreP : "CHOCOLATE PRINCESA",
+  cantidad : 90
+  
+};
+const P005 : producto = {
+  codigoP : "P004",
+  nombreP : "MAZAMORRA MORADA",
+  cantidad : 70
+  
+};
+//Fuciones
+function agregarProducto(x:any,y:any){
+  x.stock.push(y);
+};
+
+function quitarProducto(x:any,y:any){
+  x.stock.splice(y,1);
+};
+// Almacen01/ producto01 / Almacen 02
+function moverProducto(x:any,y:any,z:any){
+
+  z.stock.push(y);
+};
+//AGREGAR PRODUCTO
+agregarProducto(A001,P001);
+agregarProducto(A001,P002);
+agregarProducto(A001,P003);
+agregarProducto(A002,P004);
+agregarProducto(A002,P005);
+//MOSTRAR TABLA
+console.log("ALMACEN 01")
 console.table(A001);
+console.log("ALMACEN 02")
+console.table(A002);
+//QUITAR PRODUCTO
+quitarProducto(A002,0);
+//MOSTRAR TABLA
+console.log("ALMACEN 01")
+console.table(A001);
+console.log("ALMACEN 02")
+console.table(A002);
+//MODIFICAR CANTIDADES
+
+//MOVER DE ALMACEN 1 A 2
