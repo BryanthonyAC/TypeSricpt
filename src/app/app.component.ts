@@ -93,6 +93,7 @@ export class AppComponent {
 //   return a+b;
 // }
 // console.log("La suma es: ",suma(5,6));
+//Este sera el primer cambio
 export default class Almacen{
   constructor (
     private codigoA : string,
